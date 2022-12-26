@@ -8,7 +8,7 @@ import polymc as pmc
 # Variables (ie user defined input)
 time = 'time'
 raw_data = 'data'
-min_step = int
+min_interval = int
 start = float
 end = float
 num_steps = int
@@ -20,7 +20,7 @@ coef = 1 # default 1
 xval = sorted(list(xval_raw) + list(data[time]))
 interp = interpolate.interp1d(data[time], data[raw_data])
 ipa = IPA()
-ipa.parter(xval, interp(xval), min_step)
+ipa.parter(xval, interp(xval), min_interval)
 lister = ipa.lister
 
 def func_val(timestamp, interp = interp):
