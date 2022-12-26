@@ -14,7 +14,7 @@ class IPA:
     def __init__(self) -> None:
         self.lister = []
 
-    def parter(self, interval: np.ndarray, interp: np.array, min_size: int) -> None:
+    def parter(self, interval, interp, min_size: int) -> None:
         if len(interval) < min_size:
             raise ValueError('something went wrong, last section cant be an interval')
         elif len(interval) == min_size:
