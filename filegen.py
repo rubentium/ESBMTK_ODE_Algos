@@ -9,8 +9,11 @@ import polymc as pmc
 time = 'time'
 raw_data = 'data'
 min_step = int
+start = float
+end = float
+num_steps = int
 data = pd.read_csv(r'file-path', usecols=[time, raw_data])
-xval_raw = np.linspace(float, float, int) # interval bounds and number of timesteps
+xval_raw = np.linspace(start, end, num_steps) # interval bounds and number of timesteps
 coef = 1 # default 1
 
 # Interpolation and interval patitioning
